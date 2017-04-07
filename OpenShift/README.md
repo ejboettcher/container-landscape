@@ -1,0 +1,1 @@
+Openshift is a RedHat platform that is built on Docker and Kubernetes
