@@ -2,3 +2,5 @@ Singularity is an Apache Mesos framework. It runs as a task scheduler on top of 
 
 http://getsingularity.com/Docs/about/how-it-works.html
 
+http://www.admin-magazine.com/HPC/Articles/Singularity-A-Container-for-HPC
+
