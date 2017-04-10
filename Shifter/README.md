@@ -1,0 +1,1 @@
+Markdown formatted readme for Shifter

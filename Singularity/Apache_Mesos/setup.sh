@@ -1,4 +1,5 @@
 #!/bin/bash
+## Setup script for Apache Mesos
 
 #required utilities
 sudo apt-get install -y tar wget git
