@@ -1,1 +1,0 @@
-Markdown formatted readme for Kubernetes
