@@ -1,3 +1,3 @@
-#/bin/bash
+#!/bin/bash
 
 ## setup script for LXD
