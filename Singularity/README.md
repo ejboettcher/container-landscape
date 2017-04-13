@@ -48,4 +48,4 @@ Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
 [2]:http://www.admin-magazine.com/HPC/Articles/Singularity-A-Container-for-HPC
 [usage1]:https://researchapps.github.io/reproducibility/physics/2016/11/17/singularity-hello-world/
 [usage2]:https://hpc.nih.gov/apps/singularity.html
-[usage3]:
+[comparison]:http://geekyap.blogspot.ch/2016/11/docker-vs-singularity-vs-shifter-in-hpc.html
