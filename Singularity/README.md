@@ -17,12 +17,30 @@ Benefits of Singularity:
 
 ## Container technology used
 Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
+
 ## Host OS requirements
+Linux OS with somewhat modern kernel (known to work on Ubuntu, Centos, RedHat, and others)
+
 ## Containerised OS capabilities
+Multiple linux OS (Ubuntu Centos, RedHat, and others).  Note: may not be able reproduce versions with newer kernel than the host
+
 ## User workflow
+1. Create image somewhere the user has root/admin rights
+2. Test image locally
+3. Upload image to HPC
+4. Start image in scheduler batch script
+5. Execute useer code on container
+
 ## Admin workflow
+1. Install Singularity on HPC system
+2. Provide place for image creation
+3. Provide sample base images for each system
+
 ## Security overview
+
+
 ## Licensing
+Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
 
 [Singularity.jpg]:https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Singularity-architecture_G-Kurtzer-e1477021972985.jpg
 [1]:http://singularity.lbl.gov/
