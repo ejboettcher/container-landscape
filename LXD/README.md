@@ -12,17 +12,15 @@ LXD is a canonical software package that bills itself as a "container hypervisor
 * Rapid provisioning, instant boot
 * remote image services
 
+While sharing a considerable amount with conventional LXC, the Canonical LXD allows for instances of most other linux distributions to be ran without a traditional hypervisor.  In addition to this LXD provides an HTTPS OpenStack interface and a local command line tool for interacting with these containers.
+
 Supposedly can be compiled for other OS architecture (centos, redhat) but may not be fully functional.
 
 First-party support for Go and Python API clients. Third-party support for Ruby, java, and Node.js API clients. 
 
 LXC images have the ability to run a docker image within them which would provide the security of LXC to a docker container (no root escape concerns).
 
-LXC containers run as the users UID and shift all UID's within the container so escaping the container only allows for unpriveleged access.
-
 LXC/LXD containers are built similar to how a full virtual machine is, this process can leverage existing IT automation tools such as puppet/chef/ansible etc.[2][2]
-
-Possibly similar to Singularity, need to investigate whether a user can configure a container.  In other words, is root access on the host required to get container root (for configuration/installation of software)?
 
 ## Container technology used
 LXD utilizes LXC container technology.
@@ -61,13 +59,14 @@ Potential admin workflow:
 ## Security and Usability overview
 Being the most low level of the container technologies and most mature, LXC will provide the most security and isolation for a users container.  Given that escalation of priveleges inside the container does not grant elevated priveleges on the host make this approach very isolated and actually may increase security on a multiuser environment.
 
-Containers can created, ran, and destroyed all with an unpriveleged (non root) account by default. 
+Containers can created, ran, and destroyed all with an unpriveleged (non root) account by default.
+
+To take advantage of all of the security available with LXD a modern linux kernel that supports cgroup namespaces will be required (4.4+)
 
 Usability is not very high with this approach.  Lacking any Windows support and requiring most of the work being done by the user to setup, maintain, and run the container may be too ambitious.
 
 ## Licensing
-Open Source via Canonical
-
+Free software under Apache 2 license.  Commercial support for LXD on Ubuntu LTS provided by Canonical.
 
 [1]:https://www.ubuntu.com/containers/lxd
 [2]:https://oliverveits.wordpress.com/2016/09/11/lxd-vs-docker-or-getting-started-with-lxd-containers/
