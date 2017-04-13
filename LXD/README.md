@@ -61,6 +61,8 @@ Potential admin workflow:
 ## Security and Usability overview
 Being the most low level of the container technologies and most mature, LXC will provide the most security and isolation for a users container.  Given that escalation of priveleges inside the container does not grant elevated priveleges on the host make this approach very isolated and actually may increase security on a multiuser environment.
 
+Containers can created, ran, and destroyed all with an unpriveleged (non root) account by default. 
+
 Usability is not very high with this approach.  Lacking any Windows support and requiring most of the work being done by the user to setup, maintain, and run the container may be too ambitious.
 
 ## Licensing
