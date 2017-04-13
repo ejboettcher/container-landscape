@@ -14,6 +14,7 @@ Benefits of Singularity:
 * can import docker containers
 * supports any scheduler
 * supports GPU
+* lots of documentation on using singularity containers on HPC
 
 ## Container technology used
 Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
@@ -45,3 +46,6 @@ Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
 [Singularity.jpg]:https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Singularity-architecture_G-Kurtzer-e1477021972985.jpg
 [1]:http://singularity.lbl.gov/
 [2]:http://www.admin-magazine.com/HPC/Articles/Singularity-A-Container-for-HPC
+[usage1]:https://researchapps.github.io/reproducibility/physics/2016/11/17/singularity-hello-world/
+[usage2]:https://hpc.nih.gov/apps/singularity.html
+[usage3]:
