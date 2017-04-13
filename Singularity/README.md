@@ -1,14 +1,29 @@
 # Singularity
 ## Overview
+Note: this is the Lawrence Berkley National Lab Singularity software available [here][1].  There is another software package called Singularity which is a Apache Mesos framework for scheduling Docker containers which can cause a lot of confusion when researching.
 
-http://getsingularity.com/Docs/about/how-it-works.html
+Singularity offers some big advantages over many traditional container solutions because it was designed for the specific purpose of mobility of compute on HPC systems.
+![singularity overview][Singularity.jpg]
 
-http://www.admin-magazine.com/HPC/Articles/Singularity-A-Container-for-HPC
+Benefits of Singularity:
+* mobility of compute
+* start/stop containers without root
+* image based containers
+* user cannot become root inside container (requires root outside container)
+* no root daemon owned processes
+* can import docker containers
+* supports any scheduler
+* supports GPU
 
 ## Container technology used
+Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
 ## Host OS requirements
 ## Containerised OS capabilities
 ## User workflow
 ## Admin workflow
 ## Security overview
 ## Licensing
+
+[Singularity.jpg]:https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Singularity-architecture_G-Kurtzer-e1477021972985.jpg
+[1]:http://singularity.lbl.gov/
+[2]:http://www.admin-magazine.com/HPC/Articles/Singularity-A-Container-for-HPC
