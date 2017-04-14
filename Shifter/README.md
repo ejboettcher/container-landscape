@@ -59,10 +59,11 @@ The imageGateway must run Docker.  Because some consider this a vulnerability th
 Documentation is lacking.  [Security concerns with Shifter.][https://github.com/NERSC/shifter/blob/master/doc/security.rst]
 
 ## Licensing
-
+Free, copyright Lawrence Berkeley National Laboratory
 
 
 [shifter.png]:https://www.nersc.gov/assets/_resampled/ResizedImage600453-shifterDiagram.png
 [1]:https://cug.org/proceedings/cug2016_proceedings/includes/files/pap103.pdf
 [2]:http://www.nersc.gov/assets/Uploads/cug2015udi.pdf
 [3]:https://www.slideshare.net/insideHPC/shifter-containers-in-hpc-environments
+[github]:https://github.com/NERSC/shifter
