@@ -48,4 +48,5 @@ Given the similarities in workflow and specific HPC focus, a test implementation
 
 In addition to Shifter and Singularity, investigating the current state of standard LXC should be considered.  While possibly having some limitations on what resources can be accessed from within an unpriveleged container, the LXC workflow from a user standpoint will be nearly identical to that of Singularity and would allow for a simple way to run custom containers across a HPC system without some of the overhead having an ImageGateway (shifter) or having to translate a container and application into a Singularity image.
 
+
 [comparison]:http://geekyap.blogspot.ch/2016/11/docker-vs-singularity-vs-shifter-in-hpc.html
