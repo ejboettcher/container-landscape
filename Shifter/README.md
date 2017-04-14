@@ -25,13 +25,16 @@ Shifter is a prototype implementation by NERSC at bringing containers to HPC sys
 > accessing the UDI in the batch job. [2][2]
 
 
-* works with parallel file systems
-* 
+* for the most part the container runs with user priveleges (shifter executable is setuid root)
+* ImageGateway automatically converts Docker images from dockerhub or private hub
+* slurm plugin for resource management
+* simple image configuration
+
 ## Container technology used
-Manipulations to linux Virtual File System to support a chroot environment for process execution.  All management and resource limiting is done by the scheduler. 
+Manipulations to linux Virtual File System to support a chroot environment for process execution.  Extracts docker image to squash-FS.  All management and resource limiting is done by the scheduler. 
 
 ## Host OS requirements
-Modern linux kernel
+Modern linux kernel (2.6.25+)
 
 ## Containerised OS capabilities
 Up to and including the kernel running on the host.  Supports other linux distributions than the host.

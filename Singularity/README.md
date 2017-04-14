@@ -14,23 +14,23 @@ Benefits of Singularity:
 * can import docker containers
 * supports any scheduler
 * supports GPU
-* lots of documentation on using singularity containers on HPC
+* better documentation on using singularity containers on HPC
 
 ## Container technology used
 Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
 
 ## Host OS requirements
-Linux OS with somewhat modern kernel (known to work on Ubuntu, Centos, RedHat, and others)
+Modern linux kernel (2.6.25+)
 
 ## Containerised OS capabilities
-Multiple linux OS (Ubuntu Centos, RedHat, and others).  Note: may not be able reproduce versions with newer kernel than the host
+Up to and including the kernel running on the host.  Supports other linux distributions than the host.
 
 ## User workflow
 1. Create image somewhere the user has root/admin rights
-2. Test image locally
+2. Interact and configure image locally
 3. Upload image to HPC
 4. Start image in scheduler batch script
-5. Execute useer code on container
+5. Execute user code on container
 
 ## Admin workflow
 1. Install Singularity on HPC system
