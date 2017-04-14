@@ -1,7 +1,8 @@
 # Shifter
 ## Overview
-Shifter is a prototype implementation by NERSC at bringing containers to HPC systems.  It does this by converting docker images (and VMs and CHOS) to a common format that is scalably distributed across nodes.  Shifter allows the user to select a docker image (dockerfile) and submit a job that will run in that container.
 ![shifter implementation][shifter.png]
+
+Shifter is a prototype implementation by NERSC at bringing containers to HPC systems.  It does this by converting docker images (and VMs and CHOS) to a common format that is scalably distributed across nodes.  Shifter allows the user to select a docker image (dockerfile) and submit a job that will run in that container.
 
 > Shifter  is  decomposed  into
 > four  major  components:  an  Image  Gateway,  command-line
@@ -29,11 +30,33 @@ Shifter is a prototype implementation by NERSC at bringing containers to HPC sys
 * works with parallel file systems
 * 
 ## Container technology used
+Manipulations to linux Virtual File System to support a chroot environment for process execution.  All management and resource limiting is done by the scheduler. 
+
 ## Host OS requirements
+Modern linux kernel
+
 ## Containerised OS capabilities
-## User workflow
+Up to and including the kernel running on the host.  Supports other linux distributions than the host.
+
+## User workflow [3][3]
+1. Create image and push to Docker Hub/ private repo
+2. Tell imageGateway to pull docker image and build
+3. Run sbatch and prepend `shifter` to executable
+
 ## Admin workflow
+1. Setup and configure imageGateway system
+2. Setup private Docker repo
+3. Install udiRoot on all compute nodes
+
 ## Security overview
+Shifter is still pre-release. 
+
+The shifter executable on all compute nodes runs as setuid root.  Once an executable is launched into a container processes are stripped of all priveleges but there are several utilities that must be run as root for each image creation and destruction.
+
+The imageGateway must run Docker.  Because some consider this a vulnerability this gateway is recommended to be separate from the HPC system, but must still communicate with the HPC system to transfer image files.
+
+Documentation is lacking
+
 ## Licensing
 
 
@@ -41,3 +64,4 @@ Shifter is a prototype implementation by NERSC at bringing containers to HPC sys
 [shifter.png]:https://www.nersc.gov/assets/_resampled/ResizedImage600453-shifterDiagram.png
 [1]:https://cug.org/proceedings/cug2016_proceedings/includes/files/pap103.pdf
 [2]:http://www.nersc.gov/assets/Uploads/cug2015udi.pdf
+[3]:https://www.slideshare.net/insideHPC/shifter-containers-in-hpc-environments
