@@ -1,26 +1,17 @@
 # LXD
 ## Overview
 LXD is a canonical software package that bills itself as a "container hypervisor".  [From LXD canonical website][1], current benefits include:
-* security by default over LXC (with AppArmor, user namespaces, SECCOMP)
-* Bare-metal performance
+
 * Easy monitoring of guest processes
-* Easy sharing of hardware resources
-* Precise quality of service and quotas
 * snaphsots and live migration
-* support for multiple cpu arch (arm, power, x86, z)
 * RESTful API with CLI
 * Rapid provisioning, instant boot
 * remote image services
+* creating images share much in common with creating virtual machines 
 
 While sharing a considerable amount with conventional LXC, the Canonical LXD allows for instances of most other linux distributions to be ran without a traditional hypervisor.  In addition to this LXD provides an HTTPS OpenStack interface and a local command line tool for interacting with these containers.
 
-Supposedly can be compiled for other OS architecture (centos, redhat) but may not be fully functional.
-
 First-party support for Go and Python API clients. Third-party support for Ruby, java, and Node.js API clients. 
-
-LXC images have the ability to run a docker image within them which would provide the security of LXC to a docker container (no root escape concerns).
-
-LXC/LXD containers are built similar to how a full virtual machine is, this process can leverage existing IT automation tools such as puppet/chef/ansible etc.[2][2]
 
 ## Container technology used
 LXD utilizes LXC container technology.
@@ -30,12 +21,7 @@ Since it is developed by Canonical, LXD works best on Ubuntu systems.  Experimen
 LXC is a part of the linux Kernel and should be supported on most systems.
 
 ## Containerised OS capabilities
-LCD supports the following containerised OS's: 
-* Ubuntu
-* Debian
-* RedHat
-* Centos
-* Oracle Linux
+Supports linux kernels up to and including the hosts version.
 
 ## User workflow
 Potential user workflow:
@@ -59,7 +45,7 @@ Potential admin workflow:
 ## Security and Usability overview
 Being the most low level of the container technologies and most mature, LXC will provide the most security and isolation for a users container.  Given that escalation of priveleges inside the container does not grant elevated priveleges on the host make this approach very isolated and actually may increase security on a multiuser environment.
 
-Containers can created, ran, and destroyed all with an unpriveleged (non root) account by default.
+Containers can be created, ran, and destroyed all with an unpriveleged (non root) account by default.  There is no guarantee that an unprivileged container will have acces to all machine resources necessary.
 
 To take advantage of all of the security available with LXD a modern linux kernel that supports cgroup namespaces will be required (4.4+)
 
