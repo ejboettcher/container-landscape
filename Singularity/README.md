@@ -13,8 +13,8 @@ Benefits of Singularity:
 * no root daemon owned processes
 * can import docker containers
 * supports any scheduler
-* supports GPU
 * better documentation on using singularity containers on HPC
+* [singularityhub][https://singularity-hub.org/faq]
 
 ## Container technology used
 Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
@@ -38,7 +38,7 @@ Up to and including the kernel running on the host.  Supports other linux distri
 3. Provide sample base images for each system
 
 ## Security overview
-
+Security paradigm remains mostly intact.  No additional root priveleges given, and the 
 
 ## Licensing
 Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
