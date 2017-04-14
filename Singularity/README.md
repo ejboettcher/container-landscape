@@ -38,7 +38,7 @@ Up to and including the kernel running on the host.  Supports other linux distri
 3. Provide sample base images for each system
 
 ## Security overview
-Security paradigm remains mostly intact.  No additional root priveleges given, and the 
+Security paradigm remains mostly intact.  No additional root priveleges given.  User requires root/admin priveleges on system where the image is being configured (can be done locally if user has priveleges).
 
 ## Licensing
 Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
@@ -49,3 +49,4 @@ Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
 [usage1]:https://researchapps.github.io/reproducibility/physics/2016/11/17/singularity-hello-world/
 [usage2]:https://hpc.nih.gov/apps/singularity.html
 [comparison]:http://geekyap.blogspot.ch/2016/11/docker-vs-singularity-vs-shifter-in-hpc.html
+[github]:https://github.com/singularityware/singularity

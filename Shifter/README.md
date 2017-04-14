@@ -56,7 +56,7 @@ The shifter executable on all compute nodes runs as setuid root.  Once an execut
 
 The imageGateway must run Docker.  Because some consider this a vulnerability this gateway is recommended to be separate from the HPC system, but must still communicate with the HPC system to transfer image files.
 
-Documentation is lacking
+Documentation is lacking.  [Security concerns with Shifter.][https://github.com/NERSC/shifter/blob/master/doc/security.rst]
 
 ## Licensing
 
