@@ -43,11 +43,11 @@ Potential user workflow:
 2. Deploy image locally or on test server (depending on ease of deploying LXC container on local OS)
 3. Test software in container
 4. Submit container to private repository in use on HPC
-5. Submit batch job starting container, exectuing code, and stopping contiainer on completion
+5. Submit batch job starting container, executing code, and stopping container on completion
 
 Notes on user workflow: Installing anything locally will likely require admin/root priveleges.  Having a designated place to build containers (perhaps on the login node) is recommended.
 
-The ability to test a container locally would require docker or a virtual machine to be installed if the user is runnign a Windows OS.
+The ability to test a container locally would require docker or a virtual machine to be installed if the user is running a Windows OS.
 
 ## Admin workflow
 Potential admin workflow:

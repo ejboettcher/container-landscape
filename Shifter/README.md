@@ -6,11 +6,9 @@ Shifter is a prototype implementation by NERSC at bringing containers to HPC sys
 
 > Shifter  is  decomposed  into
 > four  major  components:  an  Image  Gateway,  command-line
-> utilities,  “udiRoot”,  and  Workload  Manager  (WLM)  Integra-
-> tion components. The command-line utilities serve to allow a
+> utilities,  “udiRoot”,  and  Workload  Manager  (WLM)  Integration components. The command-line utilities serve to allow a
 > user to interactively manage and select images as well as ease
-> environmental  translations  between  the  host-system  environ-
-> ment  and  the  target  UDI.  The  Image  Gateway  is  responsible
+> environmental  translations  between  the  host-system  environment  and  the  target  UDI.  The  Image  Gateway  is  responsible
 > for  managing  the  images,  keeping  a  data-store  of  presently
 > loaded  images,  and  transferring  images  to  the  computational
 > platforms. In the case of Docker images, the Image Gateway
