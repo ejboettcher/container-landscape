@@ -1,6 +1,6 @@
 # OpenStack
 ## Overview
-Openstack is a cloud computing software platform designed for controlling large pools of compute, storage, and networking resources.  While making large inroads in the private cloud community, utilizing openstack for HPC purposes is still in its infancy. [1][1] [2][2].  The primary reason for this is Openstack's reliance on typical IP networking and more generalized scheduler, which combine to make 
+Openstack is a cloud computing software platform designed for controlling large pools of compute, storage, and networking resources.  While making large inroads in the private cloud community, utilizing openstack for HPC purposes is still in its infancy. [1][1] [2][2].  The primary reason for this is Openstack's reliance on typical IP networking and more generalized scheduler, which combine to make interfacing with a traditional HPC (with infiniband, specialized storage, etc.) difficult. 
 
 ## Container technology used
 Can use Docker, LXC, RKT, and traditionaly VMs.
