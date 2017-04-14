@@ -21,8 +21,6 @@ Each Readme.md contains the following:
 
 LXC uses a variety of kernel tools such as [chroot][chroot], [cgroups][cgroups], and [namespaces][namespaces] to provide isolation of containers.
 
-While Docker originally was developed using Linux containers, it has since added additional features via its own library.
-
 ### Docker
 [Docker](https://en.wikipedia.org/wiki/Docker_(software)) was originally an abstraction layer ontop of LXC but has since developed its own library (libcontainer), written in Go, which requires Linux 3.8 or higher.
 
