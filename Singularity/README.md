@@ -1,5 +1,5 @@
-# Singularity
-## Overview
+## Singularity
+### Overview
 Note: this is the Lawrence Berkley National Lab Singularity software available [here][1].  There is another software package called Singularity which is a Apache Mesos framework for scheduling Docker containers which can cause a lot of confusion when researching.
 
 Singularity offers some big advantages over many traditional container solutions because it was designed for the specific purpose of mobility of compute on HPC systems.
@@ -16,31 +16,24 @@ Benefits of Singularity:
 * better documentation on using singularity containers on HPC
 * [singularityhub][https://singularity-hub.org/faq]
 
-## Container technology used
-Custom, likely utilizes LXC with some custom tweaks (uses primarily namespaces)
+Singularity also provides a custom container implementation utilizing standard LXC features like namespaces with some custom tweaks for running in a HPC environment.  To use these features the host OS needs to be running a linux kernel newer than 2.6.25, and again can run any guest OS inside the container that uses a kernel up to and including that of the host.
 
-## Host OS requirements
-Modern linux kernel (2.6.25+)
-
-## Containerised OS capabilities
-Up to and including the kernel running on the host.  Supports other linux distributions than the host.
-
-## User workflow
+### User workflow
 1. Create image somewhere the user has root/admin rights
 2. Interact and configure image locally
 3. Upload image to HPC
 4. Start image in scheduler batch script
 5. Execute user code on container
 
-## Admin workflow
+### Admin workflow
 1. Install Singularity on HPC system
 2. Provide place for image creation
 3. Provide sample base images for each system
 
-## Security overview
+### Security overview
 Security paradigm remains mostly intact.  No additional root priveleges given.  User requires root/admin priveleges on system where the image is being configured (can be done locally if user has priveleges).
 
-## Licensing
+### Licensing
 Free, copyright owned by Gregory Kurtzer / Lawrence Berkeley National Laboratory
 
 [Singularity.jpg]:https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Singularity-architecture_G-Kurtzer-e1477021972985.jpg
