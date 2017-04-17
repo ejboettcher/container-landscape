@@ -1,5 +1,5 @@
-# Shifter
-## Overview
+## Shifter
+### Overview
 ![shifter implementation][shifter.png]
 
 Shifter is a prototype implementation by NERSC at bringing containers to HPC systems.  It does this by converting docker images (and VMs and CHOS) to a common format that is scalably distributed across nodes.  Shifter allows the user to select a docker image (dockerfile) and submit a job that will run in that container.
@@ -30,26 +30,20 @@ Shifter is a prototype implementation by NERSC at bringing containers to HPC sys
 * slurm plugin for resource management
 * simple image configuration
 
-## Container technology used
-Manipulations to linux Virtual File System to support a chroot environment for process execution.  Extracts docker image to squash-FS.  All management and resource limiting is done by the scheduler. 
+Shifter provides its own container environment customized for HPC purposes.  To provide isolation, Shifter extracts a Docker image to a squash-FS, then uses the linux Virtual File System to support a chroot environment for process execution.  A host linux kernel newer than 2.6.25 is required for Shifter to do this, and Shifter is capable of running a containerized kernel up to and inlcuding the version running on the host.  All process management and resource limiting is done by the scheduler.
 
-## Host OS requirements
-Modern linux kernel (2.6.25+)
 
-## Containerised OS capabilities
-Up to and including the kernel running on the host.  Supports other linux distributions than the host.
-
-## User workflow [3][3]
+### User workflow [3][3]
 1. Create image and push to Docker Hub/ private repo
 2. Tell imageGateway to pull docker image and build
 3. Run sbatch and prepend `shifter` to executable
 
-## Admin workflow
+### Admin workflow
 1. Setup and configure imageGateway system
 2. Setup private Docker repo
 3. Install udiRoot on all compute nodes
 
-## Security overview
+### Security overview
 Shifter is still pre-release. 
 
 The shifter executable on all compute nodes runs as setuid root.  Once an executable is launched into a container processes are stripped of all priveleges but there are several utilities that must be run as root for each image creation and destruction.
@@ -58,7 +52,7 @@ The imageGateway must run Docker.  Because some consider this a vulnerability th
 
 Documentation is lacking.  [Security concerns with Shifter.][https://github.com/NERSC/shifter/blob/master/doc/security.rst]
 
-## Licensing
+### Licensing
 Free, copyright Lawrence Berkeley National Laboratory
 
 
